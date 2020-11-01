@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Asus</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> 
+
+
+<!---------------------------------CSS BEGINS------------------------->
+<style>
+body {font-family: 'Raleway', sans-serif;
+      /* background color */
+      bckground-color: #272A5C;
+}
+
+header, h1, wrapper { margin-top: 0; }
+/* below is the main background color */
+#wrapper { background-color: #58A5CB; 
+	         width: 90%;
+			     margin: auto;
+           color: #330000;
+} 
+
+h1, h2 { color: #000099;}
+
+header { background-image: url(images/tech7.jpg);
+         background-repeat: no-repeat;  	
+		     background-size: cover; 
+}
+
+h1 { font-family: 'Monoton', cursive;
+     text-align: center;
+     font-size: 300%;
+   	 padding: 5% 0;
+     text-shadow: 3px 5px 3px #FFF;	
+}
+
+nav, main, aside {  padding: 0 1em; 
+}
+
+img { width: 100%; 
+      height: auto;
+}
+
+nav ul { list-style-type: none; 
+         font-size: 1.2em;
+         padding-left: 2px;
+         padding-right: 2px;
+}
+
+
+nav a { text-decoration: underline;}
+nav a:link { color: #330000; }
+nav a:visited { color: #003300; }
+nav a:hover { color: #000099; }
+
+
+footer { text-align: center;
+         font-size: 80%;
+		     font-style: italic;
+		     color: #000099;
+		     padding: 2.5%;
+}
+
+/* new */
+nav{ display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row; 
+}
+
+/* TRYING TO GET NAVBAR ON TOP */
+
+/* ADDING BELOW TAKES AWAY NAV FROM LEFT HAND SIDE BUT IS IN COLUMN FORM*/
+
+nav { -webkit-flex-direction: column;
+                flex-direction: column;
+                justify-content: space-between;
+                flex: 100px;
+                text-align: center;}
+
+nav li {display: inline;
+padding: 25px;
+margin-left: 10px;}
+
+
+/* adjusts tablet view for desktop so is regular 3 columns */
+#tablet { display: flex;
+        flex-wrap: flex; }
+
+nav { -webkit-flex: 0; flex: 0;}
+
+main { -webkit-flex: 7; flex: 7; }
+
+aside { -webkit-flex: 2; flex: 2; }
+
+
+/********************END OF DESKTOP***********************/
+
+/* Tablet view */
+
+@media only screen and (max-width: 1024px) {
+      body { margin: 0; padding: 0; } 
+            #wrapper { width: auto; margin: 0; }
+
+        h1 { font-size: 200%; }
+
+/* fixed padding from 0.5em to 0.3em to prevent horizontal scroll from nav */
+      nav li { padding: 0 0.3em; 
+             font-size: 1.2em; }
+
+        /* this makes 2 columns of main and aside but nav is still there */
+      #demo { -webkit-flex-direction: column;
+                flex-direction: column; 
+                display: flex; }
+
+       nav { -webkit-order: 0;
+                 order: 0; }
+
+             /* makes nav go into a row instead of column @ top of page */
+             nav ul { display: -webkit-flex;
+                     display: flex;
+                     -webkit-flex-direction: row;
+                     flex-direction: row;
+                     -webkit-justify-content: center;
+                     justify-content: center; } 
+            
+             #tablet { display: flex;
+               flex-wrap: wrap; }
+
+           #tablet>* { flex: 200px; }
+
+         }
+
+
+/* smartphone display */
+/* set the order from 1 to 0 to make the nav at the top instead of at bottom
+applies to tablet and smartphone */
+
+@media only screen and (max-width: 768px) {
+         	/* moves the nav to the bottom above footer */
+          nav { -webkit-order: 1;
+                 order: 0; 
+                 }
+          /* wraps the navigation onto more than 1 line */
+          nav ul { -webkit-flex-wrap: wrap;
+                   flex-wrap: wrap; 
+                 }
+}
+
+header, main, nav, footer, figure, figcaption { display: block; }
+
+</style>
+<!---------------------------------CSS ENDS------------------------->
+
+
+
+<!--[if lt IE 9]>
+   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>   
+<![endif]--> 
+</head>
+<body>
+<div id="wrapper">
+  <header role="banner">
+    <h1>ASUS</h1>
+  </header>  
+
+  <div id="demo"><!--flex opening-->
+  <nav role="navigation">
+    <ul>
+	 <li><a href="index.html">Home</a></li>
+     <li><a href="/">Desktops</a></li>
+     <li><a href="/">Deals</a></li>
+     <li><a href="/">About</a></li>
+	</ul> 
+   </nav>
+
+  <div id="tablet"> 
+   <main role="main">   
+	<h2>Laptops</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor leo ipsum, quis efficitur urna mattis sed. Fusce enim tortor, fringilla id porta in, feugiat eget nulla. Quisque vel elit vel nisl iaculis vehicula vitae ut ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in tortor at velit faucibus euismod sit amet mollis urna. Fusce placerat dui non porta fermentum. In suscipit nec metus sed cursus. Nulla condimentum facilisis venenatis. Suspendisse euismod feugiat justo, quis dictum leo luctus sed. Suspendisse varius elit justo. </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor leo ipsum, quis efficitur urna mattis sed. Fusce enim tortor, fringilla id porta in, feugiat eget nulla. Quisque vel elit vel nisl iaculis vehicula vitae ut ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec in tortor at velit faucibus euismod sit amet mollis urna. Fusce placerat dui non porta fermentum. In suscipit nec metus sed cursus. Nulla condimentum facilisis venenatis. Suspendisse euismod feugiat justo, quis dictum leo luctus sed. Suspendisse varius elit justo. </p>
+  	<h2>Desktops</h2>
+    <p>Sed tempor leo ipsum, quis efficitur urna mattis sed. Fusce enim tortor, fringilla id porta in, feugiat eget nulla. Quisque vel elit vel nisl iaculis vehicula vitae ut ex..</p>
+	<h2>About the ASUS brand</h2>
+	<p>Sed tempor leo ipsum, quis efficitur urna mattis sed. Fusce enim tortor, fringilla id porta in, feugiat eget nulla. Quisque vel elit vel nisl iaculis vehicula vitae ut ex.</p>
+   </main> 
+
+   <aside role="complementary">
+   <img src="images/asus2.jpg"  alt="Asus Laptops">
+	 <h2>Why ASUS is great!</h2>
+	 <p> Sed tempor leo ipsum, quis efficitur urna mattis sed. Fusce enim tortor, fringilla id porta in, feugiat eget nulla. Quisque vel elit vel nisl iaculis vehicula vitae ut ex.</p>
+   </aside>
+  </div> 
+ </div> <!-- end of demo flex container -->
+
+   <footer role="contentinfo">Copyright &copy; 2020
+   </footer>
+
+</div><!-- end wrapper div -->
+</body>
+</html>
